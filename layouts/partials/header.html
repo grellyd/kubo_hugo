@@ -1,7 +1,7 @@
 <div id="header">
     <div class="links">
         <ul>
-            <li><a href="/">Grellyd</a></li>
+            <li><a href="/">{{ .Site.Params.SiteName }}</a></li>
             {{ range (where $.Site.RegularPages "Section" "==" "static") }}
             <li>
                 <a href="{{ .URL }}">{{ .Title }}</a>

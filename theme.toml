@@ -5,11 +5,11 @@ name = "Kubo"
 license = "MIT"
 licenselink = "https://github.com/grellyd/kubo/blob/master/LICENSE.md"
 description = "Kubo theme for Hugo"
-homepage = "https://github.com/grellyd/kubo"
+homepage = "https://github.com/grellyd/kubo_hugo"
 tags = []
 features = []
 min_version = "0.37"
 
 [author]
   name = "Graham L. Brown"
-  homepage = "www.grellyd.com"
+  homepage = "https://www.grellyd.com"

@@ -1,5 +1,5 @@
 <div id="sidebar" class="sidenav">
-            <a href="/" id="link-title">Grellyd</a>
+    <a href="/" id="link-title">{{ .Site.Params.SiteName }}</a>
             {{ range (where $.Site.Sections "Section" "==" "post") }}
             <a href="{{ .URL }}">{{ .Title }}</a>
             {{ end }}

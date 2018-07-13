@@ -4,18 +4,16 @@
         <meta charset="utf-8">
         <meta charset="UTF-8">
         <meta name="description" content="Home of {{ .Site.Params.AuthorName }}. Blog, projects, technical work, and more!">
-        <meta name="keywords" content="Grellyd Blog,Personal Site">
+        <meta name="keywords" content="{{ .Site.Params.SiteName }} Blog,Personal Site">
         <meta name="author" content="{{ .Site.Params.AuthorName }}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <base href="{{ .Site.BaseURL }}">
         <link rel="stylesheet" href="{{ "/css/style.css" }}">
-        <link href="https://fonts.googleapis.com/css?family=Poly" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
         <title>{{ .Site.Title }}</title>
     </head>
     <body>
-        {{/*  
-        {{ partial "header.html" . }}
-        */}}
+        {{/* Use either partial header or sidebar, not both */}}
         {{ partial "sidebar.html" . }}
         {{ block "main" . }}
         {{ end }}

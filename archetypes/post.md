@@ -2,7 +2,7 @@
 +++
 title: "{{ replace .Name "_" " " | title }}"
 date: {{ .Date }}
-draft: false
+draft: true
 +++
 
 **Insert Lead paragraph here.****
