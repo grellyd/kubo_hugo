@@ -1,7 +1,7 @@
 <div id="newposts">
     <h2>New Posts</h2>
     <ul>
-        {{ range (where .Data.Pages "Section" "==" "post") }}
+        {{ range (where $.Site.RegularPages "Section" "==" "post") }}
         <li>
             <span class="date">{{ .Date.Format "2006/01/02" }}</span>
             <a class="sidenav-link" href="{{ .URL }}">{{ .Title }}</a>
