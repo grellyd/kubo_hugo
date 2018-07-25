@@ -104,6 +104,9 @@ body {
     .sidenav a {font-size: 18px;}
 }
 
+#newPosts h2 {
+    padding-left: 20px;
+}
 #newPosts a {
     width: 200px;
     font-size: 10px;
