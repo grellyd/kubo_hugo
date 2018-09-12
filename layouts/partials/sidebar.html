@@ -1,9 +1,6 @@
 <div id="sidebar" class="sidenav">
     <a href="/" id="link-title">{{ .Site.Params.SiteName }}</a>
-            {{ range (where $.Site.Sections "Section" "==" "post") }}
-            <a href="{{ .URL }}">{{ .Title }}</a>
-            {{ end }}
-            {{ range (where $.Site.RegularPages "Section" "==" "static") }}
+            {{ range (where $.Site.Sections "Section" "!=" "post") }}
             <a href="{{ .URL }}">{{ .Title }}</a>
             {{ end }}
             {{ partial "newPosts.html" . }}

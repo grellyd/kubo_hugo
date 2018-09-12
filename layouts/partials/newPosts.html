@@ -1,7 +1,9 @@
 {{ $pages := where $.Site.RegularPages "Section" "==" "post" }}
 {{ if gt (len $pages) 0 }}
 <div id="newposts">
-    <h2>New Posts</h2>
+    {{ range (where $.Site.Sections "Section" "==" "post") }}
+    <a href="{{ .URL }}">{{ .Title }}</a>
+    {{ end }}
     <ul>
         {{ range $pages }}
         <li>
