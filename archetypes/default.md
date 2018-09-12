@@ -1,4 +1,8 @@
+// Default Archtype
 +++
-title: ''
-date: ''
+title: "{{ .Name | humanize | title }}"
+date: {{ .Date }}
+draft: true
 +++
+
+**Insert Lead paragraph here.****
