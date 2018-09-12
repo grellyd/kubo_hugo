@@ -1,7 +1,9 @@
+{{ $pages := where $.Site.RegularPages "Section" "==" "post" }}
+{{ if gt (len $pages) 0 }}
 <div id="newposts">
     <h2>New Posts</h2>
     <ul>
-        {{ range (where $.Site.RegularPages "Section" "==" "post") }}
+        {{ range $pages }}
         <li>
             <span class="date">{{ .Date.Format "2006/01/02" }}</span>
             <a class="sidenav-link" href="{{ .URL }}">{{ .Title }}</a>
@@ -9,3 +11,4 @@
         {{ end }}
     </ul>
 </div>
+{{ end }}
