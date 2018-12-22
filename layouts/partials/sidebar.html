@@ -1,7 +1,16 @@
 <div id="sidebar" class="sidenav">
-    <a href="/" id="link-title">{{ .Site.Params.SiteName }}</a>
-            {{ range (where $.Site.Sections "Section" "!=" "post") }}
+    <a h
+        ref="/" id="link-title">{{ .Site.Params.SiteName }}</a>
+        {{ $allowed := true }}
+        {{ range $element := $.Site.Sections }}
+            {{ range $hidden := $.Site.Params.HiddenSections }}
+                {{ if (eq $element.Section $hidden) }}
+                    {{ $allowed = false }}
+                {{ end }}
+            {{ end }}
+            {{ if $allowed }}
             <a href="{{ .URL }}">{{ .Title }}</a>
             {{ end }}
-            {{ partial "newPosts.html" . }}
+        {{ end }}
+    {{ partial "newPosts.html" . }}
 </div>
