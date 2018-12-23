@@ -1,6 +1,5 @@
 <div id="sidebar" class="sidenav">
-    <a h
-        ref="/" id="link-title">{{ .Site.Params.SiteName }}</a>
+    <a href="/" id="link-title">{{ .Site.Params.SiteName }}</a>
         {{ $allowed := true }}
         {{ range $element := $.Site.Sections }}
             {{ range $hidden := $.Site.Params.HiddenSections }}
