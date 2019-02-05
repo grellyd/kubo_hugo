@@ -56,3 +56,7 @@ ContactEmail = "graham@grellyd.com"
 SiteName = "Kubo Hugo"
 HiddenSections = ["demo"]
 ```
+
+## Running locally for Development
+
+Run `hugo server -s exampleSite --themesDir=../.. -v --debug`
