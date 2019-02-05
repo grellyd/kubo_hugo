@@ -1,0 +1,18 @@
+baseurl = "https://gohugo.io/"
+title = "Hugo Themes"
+author = "Steve Francia"
+copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
+canonifyurls = true
+paginate = 3
+
+theme = "kubo_hugo"
+disableKinds = ["RSS", "sitemap"]
+
+[params]
+AuthorName = ""
+GithubUsername = ""
+TwitterUsername = ""
+LinkedInUsername = ""
+ContactEmail = ""
+SiteName = "Hugo Themes"
+HiddenSections = ["xmas", "post", "email"]
