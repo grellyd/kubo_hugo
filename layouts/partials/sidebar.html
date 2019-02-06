@@ -12,7 +12,12 @@
             <a href="{{ .URL }}">{{ .Title }}</a>
             {{ end }}
         {{ end }}
-    {{ partial "newPosts.html" . }}
+        {{ partial "newPosts.html" . }}
+        {{ range $element := where $.Site.RegularPages "Section" "==" "" }}
+            <a href="{{ .URL }}">{{ .Title }}</a>
+        {{ end }}
+
+
     </div>
     <a href="javascript:void(0)" class="navToggle" onclick="toggleNav()" id="navToggle">&or;</a>
 </div>
