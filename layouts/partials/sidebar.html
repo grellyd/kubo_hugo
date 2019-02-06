@@ -1,5 +1,6 @@
 <div id="sidebar" class="sidenav">
     <a href="/" id="link-title">{{ .Site.Params.SiteName }}</a>
+    <a href="javascript:void(0)" class="navToggle" onclick="toggleNav()" id="navToggle">&or;</a>
     <div id="sidebarContent">
         {{ $allowed := true }}
         {{ range $element := $.Site.Sections }}
@@ -19,6 +20,5 @@
 
 
     </div>
-    <a href="javascript:void(0)" class="navToggle" onclick="toggleNav()" id="navToggle">&or;</a>
 </div>
 
