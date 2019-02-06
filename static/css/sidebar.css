@@ -43,7 +43,7 @@
     text-align: center;
 }
 
-.sidenav #newposts {
+.sidenav #sidebarContent {
     display: block;
 }
 
@@ -52,7 +52,7 @@
     .sidenav #navToggle {
         display: block;
     }
-    .sidenav #newposts {
+    .sidenav #sidebarContent {
         display: none;
     }
     .sidenav {
