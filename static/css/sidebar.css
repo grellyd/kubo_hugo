@@ -36,7 +36,25 @@
     font-size: 12px;
 }
 
+.sidenav #navToggle {
+    display: none;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.sidenav #newposts {
+    display: block;
+}
+
+/* Simple Responsiveness */
 @media screen and (max-width: 800px) {
+    .sidenav #navToggle {
+        display: block;
+    }
+    .sidenav #newposts {
+        display: none;
+    }
     .sidenav {
         position: static;
         width: 100%;
