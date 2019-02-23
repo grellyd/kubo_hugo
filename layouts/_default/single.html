@@ -12,5 +12,13 @@
 
 <main>
 {{ .Content}}
+
+
+{{ printf "%#v" .Params }}
+<br><br>
+{{ range $elem := $.Site.RegularPages }}
+    {{ printf "%#v" $elem.Title }}
+    {{ printf "%#v" $elem.Section }}
+{{ end }}
 </main>
 {{ end }}

@@ -7,7 +7,7 @@
                 <a href="{{ .URL }}">{{ .Title }}</a>
             </li>
             {{ end }}
-            {{ range (where $.Site.Sections "Section" "==" "post") }}
+            {{ range (where $.Site.Sections "Section" "==" "blog") }}
             <li>
                 <a href="{{ .URL }}">{{ .Title }}</a>
             </li>
