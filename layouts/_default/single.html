@@ -2,13 +2,19 @@
 <div class="single">
     <h1><span class="single-title">{{ .Title }}</span></h1>
     {{ with .Params.author }}
-        <h2 class="single-author">{{ . }}</h2>
+        <h2 class="single-author">By {{ . }}</h2>
     {{ end }}
     
     {{ if (gt .Params.date 0) }}
-        <h2 class="single-date">{{ .Date.Format "2006/01/02" }}</h2>
+        <h2 class="single-date">Published {{ .Date.Format "2006/01/02" }}</h2>
+    {{ end }}
+    
+    {{ with .Params.updated }}
+        <h2 class="single-date">Updated {{ .Date.Format "2006/01/02" }}</h2>
     {{ end }}
 </div>
+
+<hr>
 
 <main>
 {{ .Content}}
