@@ -1,7 +1,7 @@
-{{ $pages := where $.Site.RegularPages "Section" "==" "blog" }}
+{{ $pages := where $.Site.RegularPages "Section" "==" "writing" }}
 {{ if gt (len $pages) 0 }}
-<div id="newblogs">
-    {{ range (where $.Site.Sections "Section" "==" "blog") }}
+<div id="newwriting">
+    {{ range (where $.Site.Sections "Section" "==" "writing") }}
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     {{ end }}
     <ul>
