@@ -4,12 +4,12 @@
             <li><a href="/">{{ .Site.Params.SiteName }}</a></li>
             {{ range (where $.Site.RegularPages "Section" "==" "static") }}
             <li>
-                <a href="{{ .URL }}">{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             </li>
             {{ end }}
             {{ range (where $.Site.Sections "Section" "==" "blog") }}
             <li>
-                <a href="{{ .URL }}">{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             </li>
             {{ end }}
         </ul>

@@ -10,12 +10,12 @@
                 {{ end }}
             {{ end }}
             {{ if $allowed }}
-            <a href="{{ .URL }}">{{ .Title }}</a>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             {{ end }}
         {{ end }}
         {{ partial "newPosts.html" . }}
         {{ range $element := where $.Site.RegularPages "Section" "==" "" }}
-            <a href="{{ .URL }}">{{ .Title }}</a>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{ end }}
 
 

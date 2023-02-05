@@ -2,13 +2,13 @@
 {{ if gt (len $pages) 0 }}
 <div id="newblogs">
     {{ range (where $.Site.Sections "Section" "==" "blog") }}
-    <a href="{{ .URL }}">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     {{ end }}
     <ul>
         {{ range $pages }}
         <li>
             <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-            <a class="sidenav-link" href="{{ .URL }}">{{ .Title }}</a>
+            <a class="sidenav-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
         </li>
         {{ end }}
     </ul>
