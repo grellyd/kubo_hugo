@@ -1,8 +1,0 @@
-{{ template "_internal/google_analytics.html" . }}
-<script>
-    var host = window.location.hostname;
-    if(host == "localhost") // disable GA
-    {
-        window['ga-disable-{{ .Site.GoogleAnalytics }}'] = true;
-    }
-</script>
